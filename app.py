@@ -7,8 +7,11 @@ import time
 
 def main():
     tweets = get_latest_tweets("ulanburki")
+    print(f"{len(tweets)} tweet bulundu.")
     for tweet in tweets:
+        print(f"Tweet: {tweet['content'][:80]}...")  # ilk 80 karakteri yaz
         media_paths = download_media(tweet)
+        print(f"Medya dosyaları: {media_paths}")
         post_to_bluesky(tweet['content'], media_paths)
 
 # 30 dakikada bir çalıştır
