@@ -1,0 +1,19 @@
+services:
+  - type: cron
+    name: twitter-to-bluesky
+    env: python
+    schedule: "*/30 * * * *"
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"
+    envVars:
+      - key: BLUESKY_USERNAME
+        value: "@osmanturgut.com"
+      - key: BLUESKY_APP_PASSWORD
+        value: "hmdm-nolm-7lqt-ak6l"
+#
+//  render.yaml
+//  
+//
+//  Created by Osman Turgut on 16/05/2025.
+//
+
