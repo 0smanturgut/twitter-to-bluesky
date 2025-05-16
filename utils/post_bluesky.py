@@ -8,10 +8,3 @@ def post_to_bluesky(text, media_paths):
         client.send_post(text, media_paths)
     else:
         client.send_post(text)
-#
-//  post_bluesky.py
-//  
-//
-//  Created by Osman Turgut on 16/05/2025.
-//
-
