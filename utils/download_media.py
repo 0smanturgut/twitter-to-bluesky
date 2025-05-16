@@ -14,10 +14,3 @@ def download_media(tweet):
         except Exception as e:
             print(f"Media download failed: {e}")
     return media_paths
-
-//  download_media.py
-//  
-//
-//  Created by Osman Turgut on 16/05/2025.
-//
-
