@@ -11,10 +11,17 @@ def main():
 
 if __name__ == "__main__":
     main()
+import schedule
+import time
+
+schedule.every(30).minutes.do(main)
+
+while True:
+    schedule.run_pending()
+    time.sleep(1)
 #
 //  app.py
 //  
 //
-//  Created by Osman Turgut on 16/05/2025.
 //
 
