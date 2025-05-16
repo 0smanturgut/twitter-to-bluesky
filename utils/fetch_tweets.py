@@ -11,10 +11,3 @@ def get_latest_tweets(username, limit=5):
             'url': tweet.url
         })
     return tweets
-#
-//  fetch_tweets.py
-//  
-//
-//  Created by Osman Turgut on 16/05/2025.
-//
-
