@@ -9,6 +9,7 @@ def get_latest_tweets(username, limit=5):
         f'twitter-user {username}'
     ]
     result = subprocess.run(command, capture_output=True, text=True)
+    print("Komut çıktısı:", result.stdout)
     tweets_raw = result.stdout.strip().split("\n")
     tweets = []
     for line in tweets_raw:
