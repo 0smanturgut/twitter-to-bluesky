@@ -1,22 +1,6 @@
-import subprocess
-import json
-
 def get_latest_tweets(username, limit=5):
-    command = [
-        'snscrape',
-        '--jsonl',
-        f'--max-results={limit}',
-        f'twitter-user {username}'
-    ]
-    result = subprocess.run(command, capture_output=True, text=True)
-    print("Komut çıktısı:", result.stdout)
-    tweets_raw = result.stdout.strip().split("\n")
-    tweets = []
-    for line in tweets_raw:
-        tweet_data = json.loads(line)
-        tweets.append({
-            'id': tweet_data['id'],
-            'content': tweet_data['content'],
-            'url': tweet_data['url']
-        })
-    return tweets
+    return [{
+        'id': 123456,
+        'content': "Bu bir test tweetidir. 🧪",
+        'url': "https://twitter.com/ulanburki/status/123456"
+    }]
