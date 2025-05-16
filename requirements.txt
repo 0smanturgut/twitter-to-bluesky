@@ -1,5 +1,4 @@
-snscrape
+git+https://github.com/JustAnotherArchivist/snscrape.git
 yt-dlp
 atproto
 python-dotenv
-
